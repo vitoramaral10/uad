@@ -52,6 +52,13 @@ class SettingsPage extends GetView<GetxSettingsPresenter> {
             Card(
               child: Column(
                 children: [
+                  Text(
+                    'The following settings only affect the currently selected device: ${controller.deviceName} (${controller.deviceId})',
+                    style: Get.textTheme.titleMedium!.copyWith(
+                      color: Colors.redAccent,
+                    ),
+                  ),
+                  const Divider(),
                   ListTile(
                     trailing: Checkbox(
                       value: true,
@@ -73,15 +80,7 @@ class SettingsPage extends GetView<GetxSettingsPresenter> {
                     subtitle: const Text(
                         'In some cases, it can be better to disable a package instead of uninstalling it.'),
                   ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 16),
-            Text('Backup', style: Get.theme.textTheme.titleLarge),
-            const SizedBox(height: 8),
-            Card(
-              child: Column(
-                children: [
+                  const Divider(),
                   ListTile(
                     trailing: FilledButton(
                       onPressed: () {},

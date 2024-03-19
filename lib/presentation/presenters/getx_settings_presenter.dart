@@ -9,9 +9,15 @@ class GetxSettingsPresenter extends GetxController
   // SaveThemeMode saveThemeMode;
 
   final _darkMode = false.obs;
+  final _deviceName = ''.obs;
+  final _deviceId = ''.obs;
 
   @override
   bool get darkMode => _darkMode.value;
+  @override
+  String get deviceName => _deviceName.value;
+  @override
+  String get deviceId => _deviceId.value;
 
   GetxSettingsPresenter(
       //   {
