@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:uad/presentation/presenters/presenters.dart';
 
 import 'main/factories/factories.dart';
 
@@ -15,7 +16,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Universal Android Debloater',
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.system,
+      initialBinding: makeSplashBinding(),
+      onInit: () {
+        GetxSplashPresenter.to.initailize();
+      },
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFF5E4266),
@@ -30,8 +35,13 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      initialRoute: '/settings',
+      initialRoute: '/',
       getPages: [
+        GetPage(
+          name: '/',
+          page: () => makeSplashPage(),
+          binding: makeSplashBinding(),
+        ),
         GetPage(
           name: '/settings',
           page: () => makeSettingsPage(),
