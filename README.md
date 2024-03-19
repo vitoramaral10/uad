@@ -1,16 +1,17 @@
-# uad
+# Universal Android Debloater
 
-A new Flutter project.
+Utilize essa ferramenta para remover aplicativos indesejados do seu dispositivo Android.
 
-## Getting Started
+## Contribuir
 
-This project is a starting point for a Flutter application.
+Se você deseja contribuir com o projeto, siga as instruções abaixo:
 
-A few resources to get you started if this is your first Flutter project:
+1. Faça um fork do projeto
+2. Crie uma nova branch seguindo o padrão git flow: `git checkout -b feature/nome-da-sua-feature`
+3. Faça suas alterações e commit
+4. Faça um push para a branch criada: `git push origin feature/nome-da-sua-feature`
+5. Crie um pull request
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Licença
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Este projeto é licenciado sob a licença MIT - consulte o arquivo [LICENSE.md](LICENSE.md) para obter detalhes
