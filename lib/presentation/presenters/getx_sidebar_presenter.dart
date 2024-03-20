@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 import '../ui/components/components.dart';
 
@@ -17,12 +18,10 @@ class GetxSidebarPresenter extends GetxController implements SidebarPresenter {
 
   @override
   void getVersionApp() {
-    // TODO: implement this
-    // final packageInfo = PackageInfo.fromPlatform();
+    final packageInfo = PackageInfo.fromPlatform();
 
-    // packageInfo.then((value) {
-    // _versionApp.value = value.version;
-    // });
-    _versionApp.value = '1.0.0';
+    packageInfo.then((value) {
+      _versionApp.value = value.version;
+    });
   }
 }

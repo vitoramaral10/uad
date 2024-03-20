@@ -1,6 +1,9 @@
 import 'dart:io';
 
 import 'package:get/get.dart';
+import 'package:package_info_plus/package_info_plus.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../domain/entities/entities.dart';
 import '../../domain/helpers/helpers.dart';
@@ -42,9 +45,9 @@ class GetxAboutPresenter extends GetxController implements AboutPresenter {
 
   @override
   Future<void> getUadVersion() async {
-    // TODO: implement PackageInfo
+    final packageInfo = PackageInfo.fromPlatform();
 
-    _uadVersion.value = 'v1.0.0';
+    _uadVersion.value = (await packageInfo).version;
   }
 
   @override
@@ -79,26 +82,22 @@ class GetxAboutPresenter extends GetxController implements AboutPresenter {
 
   @override
   goToGithubPage() {
-    // TODO: implement goToGithubPage
-    // launchUrl(Uri.parse('https://github.com/vitoramaral10/uad'));
+    launchUrl(Uri.parse('https://github.com/vitoramaral10/uad'));
   }
 
   @override
   goToIssuesPage() {
-    // TODO: implement goToIssuesPage
-    // launchUrl(Uri.parse('https://github.com/vitoramaral10/uad/issues'));
+    launchUrl(Uri.parse('https://github.com/vitoramaral10/uad/issues'));
   }
 
   @override
   goToLogfilesFolder() {
-    // TODO: implement goToLogfilesFolder
-    // launchUrlString(Directory.current.path);
+    launchUrlString(Directory.current.path);
   }
 
   @override
   goToWikiPage() {
-    // TODO: implement goToWikiPage
-    // launchUrl(Uri.parse('https://github.com/vitoramaral10/uad/wiki'));
+    launchUrl(Uri.parse('https://github.com/vitoramaral10/uad/wiki'));
   }
 
   @override
@@ -124,9 +123,8 @@ class GetxAboutPresenter extends GetxController implements AboutPresenter {
         throw Exception('Unsupported OS');
       }
 
-      // TODO: implement this
-      // launchUrl(Uri.parse(link));
-    } on Exception catch (error) {
+      launchUrl(Uri.parse(link));
+    } on Exception {
       throw DomainError.unexpected;
     }
   }

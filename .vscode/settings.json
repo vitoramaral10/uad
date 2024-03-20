@@ -1,4 +1,5 @@
 {
   "cmake.configureOnOpen": true,
-  "conventionalCommits.scopes": ["settings"]
+  "conventionalCommits.scopes": ["settings"],
+  "cmake.sourceDirectory": "C:/Users/vitor/Projects/uad/windows"
 }
