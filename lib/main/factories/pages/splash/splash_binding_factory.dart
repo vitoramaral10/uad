@@ -7,9 +7,7 @@ Bindings makeSplashBinding() => _SplashBinding();
 class _SplashBinding implements Bindings {
   @override
   void dependencies() {
-    Get.lazyPut(() => GetxSplashPresenter(
-        // loadThemeMode: makeLocalLoadThemeMode()
-        ));
+    Get.lazyPut(() => GetxSplashPresenter());
     Get.lazyPut(() => GetxSidebarPresenter());
   }
 }

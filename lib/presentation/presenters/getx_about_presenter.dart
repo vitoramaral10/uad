@@ -103,7 +103,6 @@ class GetxAboutPresenter extends GetxController implements AboutPresenter {
   @override
   Future<void> updateUad() async {
     try {
-      // detecta se é windows ou linux
       final os = Platform.operatingSystem;
       String link = '';
 

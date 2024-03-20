@@ -5,9 +5,6 @@ import '../ui/pages/pages.dart';
 
 class GetxSettingsPresenter extends GetxController
     implements SettingsPresenter {
-  // LoadThemeMode loadThemeMode;
-  // SaveThemeMode saveThemeMode;
-
   final _darkMode = false.obs;
   final _deviceName = ''.obs;
   final _deviceId = ''.obs;
@@ -19,13 +16,6 @@ class GetxSettingsPresenter extends GetxController
   @override
   String get deviceId => _deviceId.value;
 
-  GetxSettingsPresenter(
-      //   {
-      //   required this.loadThemeMode,
-      //   required this.saveThemeMode,
-      // }
-      );
-
   @override
   void onInit() {
     super.onInit();
@@ -34,9 +24,7 @@ class GetxSettingsPresenter extends GetxController
   }
 
   @override
-  void loadCurrentThemeMode() {
-    // final themeMode = await loadThemeMode.load();
-    // _darkMode.value = themeMode == ThemeMode.dark;
+  Future<void> loadCurrentThemeMode() async {
     _darkMode.value = true;
   }
 
@@ -44,7 +32,7 @@ class GetxSettingsPresenter extends GetxController
   void toggleDarkMode(bool value) {
     try {
       ThemeMode themeMode = value ? ThemeMode.dark : ThemeMode.light;
-      // saveThemeMode.save(themeMode);
+
       Get.changeThemeMode(themeMode);
       _darkMode.value = value;
     } on Exception {

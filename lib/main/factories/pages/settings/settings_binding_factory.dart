@@ -7,9 +7,6 @@ Bindings makeSettingsBinding() => _SettingsBinding();
 class _SettingsBinding implements Bindings {
   @override
   void dependencies() {
-    Get.lazyPut(() => GetxSettingsPresenter(
-        // loadThemeMode: makeLocalLoadThemeMode(),
-        // saveThemeMode: makeLocalSaveThemeMode(),
-        ));
+    Get.lazyPut(() => GetxSettingsPresenter());
   }
 }
