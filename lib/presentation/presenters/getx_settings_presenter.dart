@@ -1,23 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../domain/usecases/usecases.dart';
 import '../ui/pages/pages.dart';
 
 class GetxSettingsPresenter extends GetxController
     implements SettingsPresenter {
-  LoadThemeMode loadThemeMode;
-  SaveThemeMode saveThemeMode;
+  // LoadThemeMode loadThemeMode;
+  // SaveThemeMode saveThemeMode;
 
   final _darkMode = false.obs;
+  final _deviceName = ''.obs;
+  final _deviceId = ''.obs;
 
   @override
   bool get darkMode => _darkMode.value;
+  @override
+  String get deviceName => _deviceName.value;
+  @override
+  String get deviceId => _deviceId.value;
 
-  GetxSettingsPresenter({
-    required this.loadThemeMode,
-    required this.saveThemeMode,
-  });
+  GetxSettingsPresenter(
+      //   {
+      //   required this.loadThemeMode,
+      //   required this.saveThemeMode,
+      // }
+      );
 
   @override
   void onInit() {
@@ -27,16 +34,17 @@ class GetxSettingsPresenter extends GetxController
   }
 
   @override
-  void loadCurrentThemeMode() async {
-    final themeMode = await loadThemeMode.load();
-    _darkMode.value = themeMode == ThemeMode.dark;
+  void loadCurrentThemeMode() {
+    // final themeMode = await loadThemeMode.load();
+    // _darkMode.value = themeMode == ThemeMode.dark;
+    _darkMode.value = true;
   }
 
   @override
   void toggleDarkMode(bool value) {
     try {
       ThemeMode themeMode = value ? ThemeMode.dark : ThemeMode.light;
-      saveThemeMode.save(themeMode);
+      // saveThemeMode.save(themeMode);
       Get.changeThemeMode(themeMode);
       _darkMode.value = value;
     } on Exception {
