@@ -10,5 +10,6 @@ class _SplashBinding implements Bindings {
     Get.lazyPut(() => GetxSplashPresenter(
         // loadThemeMode: makeLocalLoadThemeMode()
         ));
+    Get.lazyPut(() => GetxSidebarPresenter());
   }
 }

@@ -1,2 +1,2 @@
-export 'settings_binding.dart';
-export 'settings_page.dart';
+export 'settings_binding_factory.dart';
+export 'settings_page_factory.dart';

@@ -1,2 +1,2 @@
-export 'splash_binding.dart';
-export 'splash_page.dart';
+export 'splash_binding_factory.dart';
+export 'splash_page_factory.dart';

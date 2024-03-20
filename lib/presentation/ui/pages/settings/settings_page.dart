@@ -13,7 +13,7 @@ class SettingsPage extends GetView<GetxSettingsPresenter> {
       appBar: AppBar(
         title: const Text('Settings'),
       ),
-      drawer: const Sidebar(),
+      drawer: const SidebarWidget(),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: ListView(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../domain/usecases/helpers/helpers.dart';
+import '../../../domain/helpers/helpers.dart';
 import '../../../domain/usecases/usecases.dart';
 import '../../cache/cache.dart';
 

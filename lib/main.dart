@@ -47,6 +47,11 @@ class MyApp extends StatelessWidget {
           page: () => makeSettingsPage(),
           binding: makeSettingsBinding(),
         ),
+        GetPage(
+          name: '/about',
+          page: () => makeAboutPage(),
+          binding: makeAboutBinding(),
+        ),
       ],
     );
   }

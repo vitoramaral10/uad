@@ -16,7 +16,7 @@ class GetxSplashPresenter extends GetxController implements SplashPresenter {
   Future<void> initailize() async {
     await loadCurrentThemeMode();
 
-    Get.offAllNamed('/settings');
+    Get.offAllNamed('/about');
   }
 
   @override

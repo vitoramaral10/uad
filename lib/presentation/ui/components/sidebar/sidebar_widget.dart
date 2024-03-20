@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Sidebar extends StatelessWidget {
-  const Sidebar({
+import '../../../mixins/mixins.dart';
+import '../../../presenters/presenters.dart';
+
+class SidebarWidget extends GetView<GetxSidebarPresenter>
+    with NavigationManager {
+  const SidebarWidget({
     super.key,
   });
 
@@ -25,24 +29,24 @@ class Sidebar extends StatelessWidget {
                   leading: const Icon(Icons.apps),
                   title: const Text('Apps'),
                   selected: Get.currentRoute == '/apps',
-                  onTap: () {},
+                  onTap: () => navigateToAndRemove('/apps'),
                 ),
                 ListTile(
                   leading: const Icon(Icons.info),
                   title: const Text('About'),
                   selected: Get.currentRoute == '/about',
-                  onTap: () {},
+                  onTap: () => navigateToAndRemove('/about'),
                 ),
                 ListTile(
                   leading: const Icon(Icons.settings),
                   title: const Text('Settings'),
-                  onTap: () {},
+                  onTap: () => navigateToAndRemove('/settings'),
                   selected: Get.currentRoute == '/settings',
                 ),
               ],
             ),
           ),
-          const Text('Version 1.0.0'),
+          Obx(() => Text('Version ${controller.versionApp}')),
           const SizedBox(height: 16),
         ],
       ),
