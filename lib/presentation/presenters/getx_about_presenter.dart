@@ -124,8 +124,9 @@ class GetxAboutPresenter extends GetxController implements AboutPresenter {
         throw Exception('Unsupported OS');
       }
 
-      await downloadUad.download(link, 'uad.zip');
-    } on Exception {
+      // TODO: implement this
+      // launchUrl(Uri.parse(link));
+    } on Exception catch (error) {
       throw DomainError.unexpected;
     }
   }
