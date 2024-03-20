@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:uad/presentation/presenters/presenters.dart';
@@ -7,14 +5,6 @@ import 'package:uad/presentation/presenters/presenters.dart';
 import 'main/factories/factories.dart';
 
 void main() {
-  Process.run(
-          '${Directory.current.path}\\assets\\platform-tools\\adb.exe', ['devices'])
-      .then((result) {
-    print(result.stdout);
-  }, onError: (error) {
-    print(error);
-  });
-
   runApp(const MyApp());
 }
 
