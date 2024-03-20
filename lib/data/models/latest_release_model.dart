@@ -1,5 +1,4 @@
-import 'package:uad/domain/entities/entities.dart';
-
+import '../../domain/entities/entities.dart';
 import 'models.dart';
 
 class LatestReleaseModel {

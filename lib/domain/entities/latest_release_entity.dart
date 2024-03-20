@@ -1,4 +1,4 @@
-import 'assets_entity.dart';
+import 'entities.dart';
 
 class LatestReleaseEntity {
   final String tagName;

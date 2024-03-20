@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:uad/presentation/presenters/presenters.dart';
 
 import 'main/factories/factories.dart';
+import 'presentation/presenters/presenters.dart';
 
 void main() {
   runApp(const MyApp());

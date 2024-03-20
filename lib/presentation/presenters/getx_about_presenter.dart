@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:get/get.dart';
-import 'package:uad/domain/helpers/helpers.dart';
-import 'package:uad/domain/usecases/usecases.dart';
 
 import '../../domain/entities/entities.dart';
+import '../../domain/helpers/helpers.dart';
+import '../../domain/usecases/usecases.dart';
 import '../ui/pages/pages.dart';
 
 class GetxAboutPresenter extends GetxController implements AboutPresenter {

@@ -1,4 +1,4 @@
-import 'package:uad/domain/entities/entities.dart';
+import '../../../../domain/entities/entities.dart';
 
 abstract class AboutPresenter {
   String get documentationVersion;

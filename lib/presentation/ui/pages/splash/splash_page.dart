@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:uad/presentation/presenters/presenters.dart';
+
+import '../../../presenters/presenters.dart';
 
 class SplashPage extends GetView<GetxSplashPresenter> {
   const SplashPage({super.key});
